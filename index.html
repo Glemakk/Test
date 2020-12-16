@@ -64,14 +64,14 @@
 
         <!-- <span class="facebook-icon"></span> -->
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.196 112.196" class="facebook-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.196 112.196" class="facebook-icon" width="60" height="60">
             <circle class="circle" cx="56.098" cy="56.098" r="56.098" />
             <path class="letter"
                 d="M70.201 58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34c0-5.964 2.833-15.303 15.301-15.303l11.234.047v12.51h-8.151c-1.337 0-3.217.668-3.217 3.513v7.585h11.334l-1.325 12.876z" />
         </svg>
 
         <!-- Это SVG-спрайт который мы добавили целиком и визуально спрятали -->
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg-sprite">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg-sprite"></svg>
             <!-- Иконка мусорного бака -->
             <symbol viewBox="0 0 64 64" id="bin-icon">
                 <g enable-background="new">
@@ -106,5 +106,145 @@
                 <use href="#bug-icon"></use>
             </svg>
         </div>
+
+        <!--======================================== ФОРМЫ ======================================-->
+
+        <!-- ТЯЖЕЛО ОФОРМЛЯТЬ ПРИ input  вложенном в label -->
+        <!-- Поэтому лучше не вкладыватть а а задавать лейблу for, а input-у такое же id -->
+        <form>
+            <label>
+                Почта
+                <input type="email" name="email" />
+            </label>
+        
+            <label>
+                Пароль
+                <input type="password" name="pwd" />
+            </label>
+        </form>
+
+        <div role="group">
+            <p>Чем вы увлекаетесь?:</p>
+        
+            <!-- name делаем один и тот же для type="checkbox" - это как раздел группы в котором ставиться флажок -->
+            <label for="hobby-1">Музыка</label>
+            <input id="hobby-1" name="hobby" type="checkbox" value="music" />
+        
+            <label for="hobby-2">Спорт</label>
+            <input id="hobby-2" name="hobby" type="checkbox" value="sports" />
+        
+            <label for="hobby-3">Чтение</label>
+            <input id="hobby-3" name="hobby" type="checkbox" value="reading" />
+        </div>
+        <div>
+            <form class="test-form">
+            <label for="age" name="name">Name</label>
+            <input type="text" name="name" id="age">
+
+            <label for="age" name="name">Tel</label>
+            <input type="tel" name="name" id="age">
+
+            <label for="age">Возраст</label>
+            <input id="age" type="range" name="age" min="0" max="120" value="30" />
+
+            <!-- Отправка формы. Именно submit отправляет. type button - просто кнопка -->
+            <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+
+        <!-- =================== Формы с репо Репеты ============================ -->
+
+        <form class="form js-speaker-form">
+            <div class="form-field">
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" placeholder="Иван Иваныч" autofocus />
+            </div>
+        
+            <div class="form-field">
+                <label for="tel">Телефон</label>
+                <input type="tel" name="tel" id="tel" placeholder="+30**-000-00-00" />
+            </div>
+        
+            <div class="form-field">
+                <label for="mail">Почта</label>
+                <input type="email" name="mail" id="mail" placeholder="my@mail.com" />
+            </div>
+        
+            <div role="group" class="group">
+                <h2 class="group-title">Тема доклада</h2>
+        
+                <ul class="topic-options">
+                    <li>
+                        <input type="checkbox" name="topic" value="html" id="html" />
+                        <label for="html">HTML</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="topic" value="css" id="css" />
+                        <label for="css">CSS</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="topic" value="js" id="js" />
+                        <label for="js">JavaScript</label>
+                    </li>
+                </ul>
+            </div>
+        
+            <div role="group" class="group">
+                <h2 class="group-title">Уровень вашей экспертизы</h2>
+        
+                <ul class="experince-options">
+                    <li>
+                        <input type="radio" name="experience" value="junior" id="junior" />
+                        <label for="junior">Junior</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="experience" value="middle" id="middle" />
+                        <label for="middle">Middle</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="experience" value="senior" id="senior" />
+                        <label for="senior">Senior</label>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="form-field">
+                <label for="date">Дата доклада</label>
+                <input type="datetime-local" name="date" id="date" class="date" />
+            </div>
+        
+            <div class="form-field">
+                <label for="pdf">Загрузите копию доклада в pdf</label>
+                <input type="file" name="pdf" id="pdf" />
+            </div>
+        
+            <div class="form-field">
+                <label for="comment">Оставьте коментарий</label>
+                <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Уточните детали доклада"></textarea>
+            </div>
+        
+            <div class="form-field">
+                <input type="checkbox" name="policy" id="policy" />
+                <label for="policy">Соглашаюсь на всё, за еду</label>
+            </div>
+        
+            <button type="submit">Оставить заявку</button>
+        </form>
+        
+        <script>
+            (() => {
+                document
+                    .querySelector('.js-speaker-form')
+                    .addEventListener('submit', e => {
+                        e.preventDefault();
+
+                        new FormData(e.currentTarget).forEach((value, name) =>
+                            console.log(`${name}: ${value}`),
+                        );
+
+                        e.currentTarget.reset();
+                    });
+            })();
+        </script>
 </body>
 </html>
