@@ -63,3 +63,28 @@ img + img {
 .icon:focus {
   fill: #ff715b;
 }
+
+/* FORMS */
+
+.form-caption {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Оформляем .form-label когда чекбокс, идущий перед ним в разметке, отмечен */
+.form-input:checked + .form-label {
+  font-weight: 700;
+  color: green;
+}

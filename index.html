@@ -230,6 +230,31 @@
         
             <button type="submit">Оставить заявку</button>
         </form>
+
+        <!-- ВЫДЕЛЕНИЕ ПРИ ВЫБОРЕ В ЧЕКБОКСЕ КОГДА label идет после input и выделяется при отмечании input -->
+
+        <form class="form">
+            <div role="group">
+                <b class="form-caption">Чем вы увлекаетесь?</b>
+        
+                <div class="form-field">
+                    <input type="checkbox" class="form-input" name="hobby" value="sports" id="sports">
+                    <label class="form-label" for="sports">Спорт</label>
+                </div>
+        
+                <div class="form-field">
+                    <input type="checkbox" class="form-input" name="hobby" value="music" id="music">
+                    <label class="form-label" for="music">Музыка</label>
+                </div>
+        
+                <div class="form-field">
+                    <input type="checkbox" class="form-input" name="hobby" value="books" id="books">
+                    <label class="form-label" for="books">Книги</label>
+                </div>
+            </div>
+        
+            <button type="submit">Отправить</button>
+        </form>
         
         <script>
             (() => {
