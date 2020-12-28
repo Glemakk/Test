@@ -271,17 +271,24 @@
 
         <form action="javascript:void(0);">
             <select>
-                <option value="frontend">Frontend</option>
-                <option value="html" selected>HTML</option>
-                <option value="css">CSS</option>
-                <option value="js">JavaScript</option>
-                <option value="vue">Vue</option>
-                <option value="react">React + GraphQL</option>
-                <option value="angular">Angular</option>
+                <optgroup value="Developer">
+                    <option value="frontend">Frontend</option>
+                </optgroup>
+                <optgroup value="Base skills">
+                    <option value="html" selected>HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+                <optgroup value="Frameworks" disabled>
+                    <option value="vue">Vue</option>
+                    <option value="react">React + GraphQL</option>
+                    <option value="angular">Angular</option>
+                </optgroup>
             </select>
             <button type="submit">Отправить</button>
             <button type="reset">Обновить</button>
         </form>
+
 
         
         <script>
