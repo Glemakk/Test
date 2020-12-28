@@ -88,3 +88,12 @@ img + img {
   font-weight: 700;
   color: green;
 }
+
+.span {
+  display: block;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  color: orange;
+  background-color: #9a9a9a;
+}

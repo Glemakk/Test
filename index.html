@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
         <!-- <svg width="400" height="300" style="outline: 1px solid black;">
@@ -257,6 +258,8 @@
         </form>
         <br>
 
+        <span class="span">SELECT</span>
+
         <!-- option элемент списка select с данными для выбора в виде текста или значения атрибута value.
 
         Атрибуты option (не обязательны):
@@ -288,6 +291,22 @@
             </select>
             <button type="submit">Отправить</button>
             <button type="reset">Обновить</button>
+        </form>
+        <br>
+
+        <span class="span">DATALIST</span>
+
+        <form action="javascript:void(0);">
+            <label for="myBrowser">Выбор браузера</label>
+            <input list="browsers" id="myBrowser" name="myBrowser" />
+            <datalist id="browsers">
+                <option>Chrome</option>
+                <option>Firefox</option>
+                <option>Internet Explorer</option>
+                <option>Opera</option>
+                <option>Safari</option>
+                <option>Microsoft Edge</option>
+            </datalist>
         </form>
         
         <script>
