@@ -255,6 +255,7 @@
         
             <button type="submit">Отправить</button>
         </form>
+        <br>
 
         <!-- option элемент списка select с данными для выбора в виде текста или значения атрибута value.
 
@@ -271,15 +272,15 @@
 
         <form action="javascript:void(0);">
             <select>
-                <optgroup value="Developer">
+                <optgroup label="Developer">
                     <option value="frontend">Frontend</option>
                 </optgroup>
-                <optgroup value="Base skills">
+                <optgroup label="Base skills">
                     <option value="html" selected>HTML</option>
                     <option value="css">CSS</option>
                     <option value="js">JavaScript</option>
                 </optgroup>
-                <optgroup value="Frameworks" disabled>
+                <optgroup label="Frameworks" disabled>
                     <option value="vue">Vue</option>
                     <option value="react">React + GraphQL</option>
                     <option value="angular">Angular</option>
@@ -288,8 +289,6 @@
             <button type="submit">Отправить</button>
             <button type="reset">Обновить</button>
         </form>
-
-
         
         <script>
             (() => {
